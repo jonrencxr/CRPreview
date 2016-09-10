@@ -36,11 +36,13 @@ static CGFloat const MinimumZoomScale = 1.0; // 图片最小缩放比例
     [self addSubview:self.scrollView];
     [_scrollView addSubview:self.imageView];
     
+    // 单击
     UITapGestureRecognizer *onceTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onceTapHandle:)];
     onceTap.numberOfTapsRequired = 1;    // 点击次数
     onceTap.numberOfTouchesRequired = 1; // 触摸手指数
     [self addGestureRecognizer:onceTap];
     
+    // 双击
     UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapHandle:)];
     doubleTap.numberOfTapsRequired = 2;
     doubleTap.numberOfTouchesRequired = 1;
@@ -48,6 +50,11 @@ static CGFloat const MinimumZoomScale = 1.0; // 图片最小缩放比例
     
     // 避免单双击的响应冲突
     [onceTap requireGestureRecognizerToFail:doubleTap];
+    
+    // 长按处理
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressHandle:)];
+    longPress.minimumPressDuration = 1.0;
+    [self addGestureRecognizer:longPress];
 }
 
 
@@ -75,8 +82,29 @@ static CGFloat const MinimumZoomScale = 1.0; // 图片最小缩放比例
     return _imageView;
 }
 
+- (UIAlertController *)alertController {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"保存图片" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self saveImage:_image];
+    }];
+    UIAlertAction *cancerAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:saveAction];
+    [alertController addAction:cancerAction];
+    return alertController;
+}
+
 - (UIView *)currentView {
     return [[[[UIApplication sharedApplication] keyWindow] subviews] lastObject];
+}
+
+- (UIViewController *)presentedViewController {
+    UIViewController *rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+    UIViewController *result = rootVC;
+    if (result.presentedViewController) {
+        result = result.presentedViewController;
+    }
+    NSLog(@"当前ViewController：%@", result);
+    return result;
 }
 
 - (CGPoint)centerPointInView:(UIScrollView *)scrollView {
@@ -100,7 +128,7 @@ static CGFloat const MinimumZoomScale = 1.0; // 图片最小缩放比例
 }
 
 
-#pragma mark - touch
+#pragma mark - action
 
 - (void)onceTapHandle:(UITapGestureRecognizer *)sender {
     _dismissBlock(YES);
@@ -116,6 +144,42 @@ static CGFloat const MinimumZoomScale = 1.0; // 图片最小缩放比例
         return;
     }
     [_scrollView setZoomScale:MinimumZoomScale];
+}
+
+- (void)longPressHandle:(UILongPressGestureRecognizer *)sender {
+    // 只允许长按开始的时候响应
+    if (sender.state == UIGestureRecognizerStateBegan) {
+        [self.presentedViewController presentViewController:self.alertController animated:YES completion:nil];
+    }
+}
+
+- (void)saveImage:(UIImage *)image {
+    if (image) {
+        UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    }
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    if (!error) {
+        [self showAlertWithMessage:@"已保存到系统相册"];
+    }else {
+        [self showAlertWithMessage:@"图片保存失败，请稍后再试"];
+    }
+}
+
+- (void)showAlertWithMessage:(NSString *)message {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    [self.presentedViewController presentViewController:alertController animated:NO completion:nil];
+    // 设置延迟消失
+    [self performSelector:@selector(hiddenAlertController:) withObject:alertController afterDelay:1.5f];
+}
+
+- (void)hiddenAlertController:(UIAlertController *)alertController {
+    if (alertController) {
+        [alertController dismissViewControllerAnimated:NO completion:nil];
+    }
 }
 
 
