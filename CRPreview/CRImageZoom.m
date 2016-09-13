@@ -93,10 +93,6 @@ static CGFloat const MinimumZoomScale = 1.0; // 图片最小缩放比例
     return alertController;
 }
 
-- (UIView *)currentView {
-    return [[[[UIApplication sharedApplication] keyWindow] subviews] lastObject];
-}
-
 - (UIViewController *)presentedViewController {
     UIViewController *rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
     UIViewController *result = rootVC;
