@@ -13,7 +13,7 @@
 ##### pageControl格式 及 基础演示
 ![Markdown](http://i2.buimg.com/574358/34c36a9a70e3ef27.jpg)
 ![Markdown](http://i2.buimg.com/574358/6fe6f22518e9c889.gif)
-#### 页码“n/m”格式
+##### 页码“n/m”格式
 ![Markdown](http://i2.buimg.com/574358/e12c172e1a6f7de6.jpg)
 ![Markdown](http://i4.piimg.com/574358/c1e7f1b0958d8f2b.gif)
 
@@ -32,5 +32,5 @@
 ### 四、注意事项
 ##### 1. 由于时间有限，笔者还未添加加载网络图片的方法，不过后期会添加上去。
 ##### 2. 暂未添加显示及隐藏的动画效果，以及双击放大时位置可能有微小的bug，待修复，欢迎提供更好的思路帮助解决。
-##### 3. 多多交流，共同提高，接受指正，有好的功能添加建议请告诉笔者，笔者一定感激不尽，笔者博客http://www.jianshu.com/users/eb0c003c8cc8/latest_articles，QQ号：1262078574。
+##### 3. 多多交流，共同提高，接受指正，有好的功能添加建议请告诉笔者，笔者一定感激不尽，笔者博客:[Jonrencxr](http://www.jianshu.com/users/eb0c003c8cc8/latest_articles)，QQ号：1262078574。
 ##### 4. 喜欢的，支持点赞就是给我最大的安慰。
