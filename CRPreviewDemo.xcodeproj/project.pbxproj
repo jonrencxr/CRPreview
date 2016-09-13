@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		969402261D879277000A7D26 /* lady_02@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 969402241D879277000A7D26 /* lady_02@2x.jpg */; };
+		969402271D879277000A7D26 /* lady_03@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 969402251D879277000A7D26 /* lady_03@2x.jpg */; };
 		96B615481D83058C00D02B1C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B615471D83058C00D02B1C /* main.m */; };
 		96B6154B1D83058C00D02B1C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B6154A1D83058C00D02B1C /* AppDelegate.m */; };
 		96B6154E1D83058C00D02B1C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B6154D1D83058C00D02B1C /* ViewController.m */; };
@@ -18,8 +20,6 @@
 		96B615781D8305E600D02B1C /* CRPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B615761D8305E600D02B1C /* CRPreview.m */; };
 		96B6157D1D83061E00D02B1C /* lady_00@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96B615791D83061E00D02B1C /* lady_00@2x.jpg */; };
 		96B6157E1D83061E00D02B1C /* lady_01@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96B6157A1D83061E00D02B1C /* lady_01@2x.jpg */; };
-		96B6157F1D83061E00D02B1C /* lady_02@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96B6157B1D83061E00D02B1C /* lady_02@2x.jpg */; };
-		96B615801D83061E00D02B1C /* lady_03@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96B6157C1D83061E00D02B1C /* lady_03@2x.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		969402241D879277000A7D26 /* lady_02@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lady_02@2x.jpg"; sourceTree = "<group>"; };
+		969402251D879277000A7D26 /* lady_03@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lady_03@2x.jpg"; sourceTree = "<group>"; };
 		96B615431D83058C00D02B1C /* CRPreviewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRPreviewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B615471D83058C00D02B1C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96B615491D83058C00D02B1C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,8 +54,6 @@
 		96B615761D8305E600D02B1C /* CRPreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRPreview.m; sourceTree = "<group>"; };
 		96B615791D83061E00D02B1C /* lady_00@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lady_00@2x.jpg"; sourceTree = "<group>"; };
 		96B6157A1D83061E00D02B1C /* lady_01@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lady_01@2x.jpg"; sourceTree = "<group>"; };
-		96B6157B1D83061E00D02B1C /* lady_02@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lady_02@2x.jpg"; sourceTree = "<group>"; };
-		96B6157C1D83061E00D02B1C /* lady_03@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lady_03@2x.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +98,8 @@
 			children = (
 				96B615791D83061E00D02B1C /* lady_00@2x.jpg */,
 				96B6157A1D83061E00D02B1C /* lady_01@2x.jpg */,
-				96B6157B1D83061E00D02B1C /* lady_02@2x.jpg */,
-				96B6157C1D83061E00D02B1C /* lady_03@2x.jpg */,
+				969402241D879277000A7D26 /* lady_02@2x.jpg */,
+				969402251D879277000A7D26 /* lady_03@2x.jpg */,
 				96B615491D83058C00D02B1C /* AppDelegate.h */,
 				96B6154A1D83058C00D02B1C /* AppDelegate.m */,
 				96B6154C1D83058C00D02B1C /* ViewController.h */,
@@ -222,11 +222,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				96B6157D1D83061E00D02B1C /* lady_00@2x.jpg in Resources */,
-				96B615801D83061E00D02B1C /* lady_03@2x.jpg in Resources */,
+				969402271D879277000A7D26 /* lady_03@2x.jpg in Resources */,
 				96B615561D83058C00D02B1C /* LaunchScreen.storyboard in Resources */,
 				96B615531D83058C00D02B1C /* Assets.xcassets in Resources */,
 				96B6157E1D83061E00D02B1C /* lady_01@2x.jpg in Resources */,
-				96B6157F1D83061E00D02B1C /* lady_02@2x.jpg in Resources */,
+				969402261D879277000A7D26 /* lady_02@2x.jpg in Resources */,
 				96B615511D83058C00D02B1C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

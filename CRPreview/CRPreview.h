@@ -8,12 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, PageNumberType) {
+    PageNumberTypeControl = 0,   // 页下中间部分用UIPageControl显示
+    PageNumberTypeCode           // 页上中间部分用页码格式 “n/m” 显示
+};
+
 @interface CRPreview : UIView
 
 /**
  *  当前页，默认为0
  */
 @property (nonatomic, assign) NSInteger currentIndex;
+
+
+/**
+ *  设置页码类型
+ */
+@property (nonatomic, assign) PageNumberType pageNumberType;
 
 
 /**
@@ -41,6 +52,13 @@
  *  组件初始化之后，调用该方法进行页面显示
  */
 - (void)show;
+
+
+/**
+ *  隐藏该组件
+ */
+- (void)dismiss;
+
 
 
 @end
