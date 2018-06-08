@@ -11,11 +11,11 @@
 
 #### 二、演示
 ##### 1. pageControl格式 及 基础演示
-![Markdown](http://i2.buimg.com/574358/34c36a9a70e3ef27.jpg)
-![Markdown](http://i2.buimg.com/574358/6fe6f22518e9c889.gif)
+![Markdown](http://upload-images.jianshu.io/upload_images/2847515-e98ce405f084bb27.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Markdown](http://upload-images.jianshu.io/upload_images/2847515-47e0cc4f993e4616.gif?imageMogr2/auto-orient/strip)
 ##### 2. 页码“n/m”格式
-![Markdown](http://i2.buimg.com/574358/e12c172e1a6f7de6.jpg)
-![Markdown](http://i4.piimg.com/574358/c1e7f1b0958d8f2b.gif)
+![Markdown](http://upload-images.jianshu.io/upload_images/2847515-bf7947a38408d537.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Markdown](http://upload-images.jianshu.io/upload_images/2847515-d9a53f4a308141a2.gif?imageMogr2/auto-orient/strip)
 
 #### 三、如何使用？
     #import "CRPreview.h"
