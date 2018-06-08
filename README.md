@@ -18,7 +18,8 @@
 ![Markdown](http://upload-images.jianshu.io/upload_images/2847515-d9a53f4a308141a2.gif?imageMogr2/auto-orient/strip)
 
 #### 三、如何使用？
-    #import "CRPreview.h"
+```
+#import "CRPreview.h"
     
     // 预览单个图片方法 (需要图片image)
     CRPreview *preview = [[CRPreview alloc] initWithImage:image];
@@ -28,6 +29,7 @@
     CRPreview *preview = [[CRPreview alloc] initWithImages:_images atIndex:0];
     preview.pageNumberType = PageNumberTypeCode; // 默认是PageNumberTypeControl样式
     [preview show];
+```
 
 #### 四、注意事项
 1. 由于时间有限，笔者还未添加加载网络图片的方法，不过后期会添加上去。
